@@ -143,9 +143,7 @@ Ejecute el siguiente comando.
 
 Para el tamaño B1ls tenemos:
 
-![image](https://user-images.githubusercontent.com/25957863/201824715-ee292587-90d8-4e99-b4c4-0de2f8e11513.png)
-
-![image](https://user-images.githubusercontent.com/25957863/201824836-6c7ef093-7e6c-4dfc-8983-6aed3cd1a312.png)
+![image](https://user-images.githubusercontent.com/25957863/201828019-b593865c-b2ab-4281-888d-dd90d4a08b34.png)
 
 Para el tamaño B2ms tenemos:
 
