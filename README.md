@@ -314,7 +314,7 @@ Existe el equilibrador de carga público el cual puede proporcionar conexiones d
 
 Existe el equilibrador de carga privado que se usa cuando se necesitan direcciones IP privadas solo en el front-end. Los equilibradores de carga internos se usan para equilibrar la carga del tráfico dentro de una red virtual. También se puede acceder a un servidor front-end del equilibrador de carga desde una red local en un escenario híbrido.
 
-*¿Qué es SKU, qué tipos hay y en qué se diferencian?.
+* ¿Qué es SKU, qué tipos hay y en qué se diferencian?.
 
 Azure Container Registry le permite crear, almacenar y administrar artefactos e imágenes de contenedores en un registro privado para todos los tipos de implementaciones de contenedores. Utilice los registros de contenedores de Azure con sus canalizaciones de implementación y desarrollo de contenedores existentes. 
 
@@ -339,13 +339,36 @@ El grupo de back-end es un componente crítico del equilibrador de carga. El gru
 
 Se usa una regla de equilibrador de carga para definir cómo se distribuye el tráfico entrante a todas las instancias dentro del grupo de back-end. Una regla de equilibrio de carga asigna una configuración de IP y un puerto front-end determinados a varias direcciones IP y puertos de back-end. Las reglas de Load Balancer son solo para el tráfico entrante.
 
-*¿Qué tipos de sesión persistente existen, por qué esto es importante y cómo puede afectar la escalabilidad del sistema?.
+* ¿Qué tipos de sesión persistente existen, por qué esto es importante y cómo puede afectar la escalabilidad del sistema?.
 
 El hash se utiliza para asignar el tráfico a los servidores disponibles. El algoritmo solo proporciona adherencia dentro de una sesión de transporte. Los paquetes que se encuentran en la misma sesión se dirigen a la misma dirección IP del centro de datos tras el punto de conexión con equilibrio de carga. Cuando el cliente inicia una nueva sesión desde la misma IP de origen, el puerto de origen cambia y provoca que el tráfico vaya hacia otro punto de conexión del centro de datos.
 
-* ¿Qué es una *Virtual Network*? ¿Qué es una *Subnet*? ¿Para qué sirven los *address space* y *address range*?
-* ¿Qué son las *Availability Zone* y por qué seleccionamos 3 diferentes zonas?. ¿Qué significa que una IP sea *zone-redundant*?
+* ¿Qué es una *Virtual Network*?
+
+Azure Virtual Network (VNet) es el componente fundamental de su red privada en Azure. VNet permite que muchos tipos de recursos de Azure, como Azure Virtual Machines (VM), se comuniquen de forma segura entre sí, Internet y las redes locales. VNet es similar a una red tradicional que operaría en su propio centro de datos, pero trae consigo beneficios adicionales de la infraestructura de Azure, como escala, disponibilidad y aislamiento.
+
+* ¿Qué es una *Subnet*? 
+
+Una Subnet permite dividir la red virtual en una o más subredes y además asignarles una parte del espacio de direcciones de la red virtual de cada subnet, además se pueden implementar recursos que se han creado en Azure en una subnet específica.
+
+* ¿Para qué sirven los *address space* y *address range*?
+
+Al crear una red virtual, debe especificar un espacio de direcciones IP privado personalizado mediante direcciones públicas y privadas (RFC 1918). Azure asigna a los recursos de una red virtual una dirección IP privada desde el espacio de direcciones que usted asigne. Por ejemplo, si implementa una máquina virtual en una red virtual con espacio de direcciones, 10.0.0.0/16, a la máquina virtual se le asignará una IP privada como 10.0.0.4.
+
+* ¿Qué son las *Availability Zone* y por qué seleccionamos 3 diferentes zonas?.
+
+Ayudan a que sus datos permanezcan sincronizados y accesibles cuando las cosas van mal. Cada zona se compone de uno o más centros de datos equipados con infraestructura independiente de alimentación, refrigeración y redes. Las zonas de disponibilidad están diseñadas para que, si una zona se ve afectada, las dos zonas restantes admitan los servicios regionales, la capacidad y la alta disponibilidad.
+
+Se dividen en 3 diferentes zonas para para proteger las aplicaciones y los datos de fallas del centro de datos, se ofrece un mejor SLA de tiempo de activiad de VM de 99.99%
+
+* ¿Qué significa que una IP sea *zone-redundant*?
+
+El almacenamiento con redundancia de zona (ZRS) replica su cuenta de almacenamiento de forma síncrona en tres zonas de disponibilidad de Azure en la región principal. Cada zona de disponibilidad es una ubicación física independiente con alimentación, refrigeración y redes independientes.
+
 * ¿Cuál es el propósito del *Network Security Group*?
+
+Puede usar un grupo de seguridad de red de Azure para filtrar el tráfico de red entre los recursos de Azure en una red virtual de Azure. Un grupo de seguridad de red contiene reglas de seguridad que permiten o deniegan el tráfico de red entrante o el tráfico de red saliente desde varios tipos de recursos de Azure. Para cada regla, puede especificar el origen y el destino, el puerto y el protocolo.
+
 * Informe de newman 1 (Punto 2)
 * Presente el Diagrama de Despliegue de la solución.
 
