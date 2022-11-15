@@ -306,10 +306,43 @@ newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALAN
 
 **Preguntas**
 
-* ¿Cuáles son los tipos de balanceadores de carga en Azure y en qué se diferencian?, ¿Qué es SKU, qué tipos hay y en qué se diferencian?, ¿Por qué el balanceador de carga necesita una IP pública?
+* ¿Cuáles son los tipos de balanceadores de carga en Azure y en qué se diferencian?.
+
+![image](https://user-images.githubusercontent.com/25957863/202042772-07421e85-10c4-4c32-96e1-99990b92f5ad.png)
+
+Existe el equilibrador de carga público el cual puede proporcionar conexiones de salida para máquinas virtuales dentro de la red virtual. Estas conexiones se realizan mediante la traducción de sus direcciones IP privadas a direcciones IP públicas. Las instancias públicas de Load Balancer se usan para equilibrar la carga del tráfico de Internet en las máquinas virtuales. 
+
+Existe el equilibrador de carga privado que se usa cuando se necesitan direcciones IP privadas solo en el front-end. Los equilibradores de carga internos se usan para equilibrar la carga del tráfico dentro de una red virtual. También se puede acceder a un servidor front-end del equilibrador de carga desde una red local en un escenario híbrido.
+
+*¿Qué es SKU, qué tipos hay y en qué se diferencian?.
+
+Azure Container Registry le permite crear, almacenar y administrar artefactos e imágenes de contenedores en un registro privado para todos los tipos de implementaciones de contenedores. Utilice los registros de contenedores de Azure con sus canalizaciones de implementación y desarrollo de contenedores existentes. 
+
+Tipos: 
+- Basic: n punto de entrada optimizado para los costos para que los desarrolladores aprendan sobre Azure Container Registry. Los registros básicos tienen las mismas funcionalidades de programación que Estándar y Premium (como integración de la autenticación de Azure Active Directory, la eliminación de imágenes y webhooks). 
+- Estándar: Los registros estándar ofrecen las mismas funcionalidades que los básicos, pero con más almacenamiento y un mayor rendimiento de las imágenes. Los registros estándar deberían satisfacer las necesidades de la mayoría de los escenarios de producción.
+- Premium: 	Los registros premium proporcionan la mayor cantidad de almacenamiento incluido y operaciones simultáneas, por lo que permiten trabajar con escenarios de mayor volumen. Además de la mayor capacidad de rendimiento de las imágenes, el nivel Premium agrega características tales como replicación geográfica para la administración de un único registro en varias regiones, confianza del contenido para la firma de etiquetas de imagen, y vínculo privado con puntos de conexión privados para restringir el acceso al Registro.
+
+*¿Por qué el balanceador de carga necesita una IP pública?
+
+Es necesario asociar una dirección IP pública a una instancia de Azure Load Balancer para que pueda ser accesible desde internet. Esta dirección IP pública actúa como dirección IP de equilibrador de cargas.
+
 * ¿Cuál es el propósito del *Backend Pool*?
+
+El grupo de back-end es un componente crítico del equilibrador de carga. El grupo de back-end define el grupo de recursos que atenderán el tráfico para una regla de equilibrio de carga determinada. Hay dos formas de configurar un grupo de back-end: Tarjeta de interfaz de red (NIC), dirección IP.
+
 * ¿Cuál es el propósito del *Health Probe*?
-* ¿Cuál es el propósito de la *Load Balancing Rule*? ¿Qué tipos de sesión persistente existen, por qué esto es importante y cómo puede afectar la escalabilidad del sistema?.
+
+- Las reglas de Azure Load Balancer requieren un sondeo de estado para detectar el estado del punto de conexión. La configuración del sondeo de estado y las respuestas del sondeo determina qué instancias del grupo de back-end recibirán nuevas conexiones. Utilice sondeos de estado para detectar el error de una aplicación. Use la sonda de estado para el control de flujo para administrar la carga o el tiempo de inactividad planificado.
+
+* ¿Cuál es el propósito de la *Load Balancing Rule*?
+
+Se usa una regla de equilibrador de carga para definir cómo se distribuye el tráfico entrante a todas las instancias dentro del grupo de back-end. Una regla de equilibrio de carga asigna una configuración de IP y un puerto front-end determinados a varias direcciones IP y puertos de back-end. Las reglas de Load Balancer son solo para el tráfico entrante.
+
+*¿Qué tipos de sesión persistente existen, por qué esto es importante y cómo puede afectar la escalabilidad del sistema?.
+
+El hash se utiliza para asignar el tráfico a los servidores disponibles. El algoritmo solo proporciona adherencia dentro de una sesión de transporte. Los paquetes que se encuentran en la misma sesión se dirigen a la misma dirección IP del centro de datos tras el punto de conexión con equilibrio de carga. Cuando el cliente inicia una nueva sesión desde la misma IP de origen, el puerto de origen cambia y provoca que el tráfico vaya hacia otro punto de conexión del centro de datos.
+
 * ¿Qué es una *Virtual Network*? ¿Qué es una *Subnet*? ¿Para qué sirven los *address space* y *address range*?
 * ¿Qué son las *Availability Zone* y por qué seleccionamos 3 diferentes zonas?. ¿Qué significa que una IP sea *zone-redundant*?
 * ¿Cuál es el propósito del *Network Security Group*?
