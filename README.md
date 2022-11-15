@@ -273,18 +273,9 @@ forever start FibonacciApp.js
 
 Realice este proceso para las 3 VMs, por ahora lo haremos a mano una por una, sin embargo es importante que usted sepa que existen herramientas para aumatizar este proceso, entre ellas encontramos Azure Resource Manager, OsDisk Images, Terraform con Vagrant y Paker, Puppet, Ansible entre otras.
 
-Maquina 1:
+Realizamos para todas las maquinas lo siguiente:
 
 ![image](https://user-images.githubusercontent.com/25957863/202036656-1d5115cf-4776-43ba-ab91-17fe0a00e63e.png)
-
-Maquina 2:
-
-![image](https://user-images.githubusercontent.com/25957863/202037544-8fc96430-1de5-4f85-a283-c2ca039811d3.png)
-
-Maquina 3:
-
-No se puede realizar la conexion pese a que la cuenta de Azure Students únciamente deja crear dos maquinas con respectiva ip pública.
-![image](https://user-images.githubusercontent.com/25957863/202039551-7a3771d1-8c67-4b42-8bb8-c23520a02eac.png)
 
 #### Probar el resultado final de nuestra infraestructura
 
@@ -295,20 +286,14 @@ http://52.155.223.248/
 http://52.155.223.248/fibonacci/1
 ```
 
-Maquina 1:
+Probando :
 ![image](https://user-images.githubusercontent.com/25957863/202036694-c7b64539-f81a-4497-bdcb-a0bd09966482.png)
 ![image](https://user-images.githubusercontent.com/25957863/202036723-e3fde105-d5e7-450d-bec7-6b5ac51e1bc3.png)
 
-Maquina 2:
-![image](https://user-images.githubusercontent.com/25957863/202037598-ae613a13-5ce4-44a7-9a61-08ee4d48c05b.png)
-![image](https://user-images.githubusercontent.com/25957863/202037648-ac54178e-fbfa-41b4-9fb4-ea8d8f88327c.png)
-
-Maquina 3:
-
-No se puede realizar la prueba debido a que no existe IP pública de la maquina creada.
-![image](https://user-images.githubusercontent.com/25957863/202039562-b81862a0-bf69-4d94-b8a6-d4135df83497.png)
 
 2. Realice las pruebas de carga con `newman` que se realizaron en la parte 1 y haga un informe comparativo donde contraste: tiempos de respuesta, cantidad de peticiones respondidas con éxito, costos de las 2 infraestrucruras, es decir, la que desarrollamos con balanceo de carga horizontal y la que se hizo con una maquina virtual escalada.
+
+
 
 3. Agregue una 4 maquina virtual y realice las pruebas de newman, pero esta vez no lance 2 peticiones en paralelo, sino que incrementelo a 4. Haga un informe donde presente el comportamiento de la CPU de las 4 VM y explique porque la tasa de éxito de las peticiones aumento con este estilo de escalabilidad.
 
