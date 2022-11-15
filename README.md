@@ -205,23 +205,33 @@ Antes de continuar puede eliminar el grupo de recursos anterior para evitar gast
 
 1. El Balanceador de Carga es un recurso fundamental para habilitar la escalabilidad horizontal de nuestro sistema, por eso en este paso cree un balanceador de carga dentro de Azure tal cual como se muestra en la imágen adjunta.
 
-![](images/part2/part2-lb-create.png)
+![image](https://user-images.githubusercontent.com/25957863/202032597-de234747-99b5-4b8d-94b5-ecc9b6aa8ed5.png)
 
 2. A continuación cree un *Backend Pool*, guiese con la siguiente imágen.
 
-![](images/part2/part2-lb-bp-create.png)
+![image](https://user-images.githubusercontent.com/25957863/202032695-40a4fae1-bd53-43fe-9b5e-4846a8596b92.png)
 
 3. A continuación cree un *Health Probe*, guiese con la siguiente imágen.
 
-![](images/part2/part2-lb-hp-create.png)
+![image](https://user-images.githubusercontent.com/25957863/202032705-0123a548-e22f-4a0c-92d0-5d8762a6bf81.png)
 
 4. A continuación cree un *Load Balancing Rule*, guiese con la siguiente imágen.
 
-![](images/part2/part2-lb-lbr-create.png)
+![image](https://user-images.githubusercontent.com/25957863/202032741-f9e97c3f-797d-48c7-9ad9-8e9a77573064.png)
+
+Una vez creado confimamos y damos aceptar:
+
+![image](https://user-images.githubusercontent.com/25957863/202032764-45a20c45-30d0-4263-8228-b53282f2f8b5.png)
 
 5. Cree una *Virtual Network* dentro del grupo de recursos, guiese con la siguiente imágen.
 
-![](images/part2/part2-vn-create.png)
+![image](https://user-images.githubusercontent.com/25957863/202032822-1373ac3d-53c4-4dfa-9a65-3428c242eebe.png)
+
+![image](https://user-images.githubusercontent.com/25957863/202032842-d0bbf8ee-6d5c-4d5f-a565-7ea39e1fc629.png)
+
+![image](https://user-images.githubusercontent.com/25957863/202032870-872fe87f-ab7f-49bb-9ff7-3090350dfafd.png)
+
+![image](https://user-images.githubusercontent.com/25957863/202032893-751569d8-dc09-4fbd-8af4-0cadfaa92500.png)
 
 #### Crear las maquinas virtuales (Nodos)
 
@@ -229,19 +239,21 @@ Ahora vamos a crear 3 VMs (VM1, VM2 y VM3) con direcciones IP públicas standar 
 
 1. En la configuración básica de la VM guíese por la siguiente imágen. Es importante que se fije en la "Avaiability Zone", donde la VM1 será 1, la VM2 será 2 y la VM3 será 3.
 
-![](images/part2/part2-vm-create1.png)
+![image](https://user-images.githubusercontent.com/25957863/202032924-ec82d568-fa37-4c63-bae7-e345cc4281f1.png)
 
 2. En la configuración de networking, verifique que se ha seleccionado la *Virtual Network*  y la *Subnet* creadas anteriormente. Adicionalmente asigne una IP pública y no olvide habilitar la redundancia de zona.
 
-![](images/part2/part2-vm-create2.png)
+![image](https://user-images.githubusercontent.com/25957863/202032967-fa487d22-3398-4685-b9be-1dc7faa3a2b9.png)
 
 3. Para el Network Security Group seleccione "avanzado" y realice la siguiente configuración. No olvide crear un *Inbound Rule*, en el cual habilite el tráfico por el puerto 3000. Cuando cree la VM2 y la VM3, no necesita volver a crear el *Network Security Group*, sino que puede seleccionar el anteriormente creado.
 
-![](images/part2/part2-vm-create3.png)
+![image](https://user-images.githubusercontent.com/25957863/202032990-4a001d79-f947-46ee-8a78-750cfb482168.png)
 
 4. Ahora asignaremos esta VM a nuestro balanceador de carga, para ello siga la configuración de la siguiente imágen.
 
-![](images/part2/part2-vm-create4.png)
+![image](https://user-images.githubusercontent.com/25957863/202033013-73aa8b84-da6f-41c8-8b9e-47a8d6cd98c8.png)
+
+Realizamos los mismos pasos para cada una de las maquinas virtuales.
 
 5. Finalmente debemos instalar la aplicación de Fibonacci en la VM. para ello puede ejecutar el conjunto de los siguientes comandos, cambiando el nombre de la VM por el correcto
 
