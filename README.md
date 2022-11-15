@@ -131,8 +131,18 @@ Calculando Fibonacci para los números dados:
 
 - Los discos administrados de Azure son volúmenes de almacenamiento de nivel de bloque que administra Azure y que se usan con Azure Virtual Machines. Los discos administrados se pueden considerar como un disco físico en un servidor local, pero virtualizado. Con los discos administrados, lo único que tiene que hacer es especificar el tamaño y el tipo del disco y aprovisionarlo. Cuando aprovisione el disco, Azure controla el resto.
 
-3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
+3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? 
+
+- La conexión por shh funciona por sesión, en el momento en el que nos conectamos la sesión mantiene los procesos que ejecutamos en los recursos, sin esta todos ellos se terminan (también los subprocesos).
+
+¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
+
+- La regla sirve para que se indique el servicio que puerto estará usando , en este caso se usó el puerto 3000.
+
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
+
+
+
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
