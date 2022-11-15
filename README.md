@@ -141,13 +141,23 @@ Calculando Fibonacci para los números dados:
 
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
 
+Para el tamaño B1ls tenemos:
+
 ![image](https://user-images.githubusercontent.com/25957863/201824715-ee292587-90d8-4e99-b4c4-0de2f8e11513.png)
 
 ![image](https://user-images.githubusercontent.com/25957863/201824836-6c7ef093-7e6c-4dfc-8983-6aed3cd1a312.png)
 
+Para el tamaño B2ms tenemos:
+
+![image](https://user-images.githubusercontent.com/25957863/201827292-30c3d222-f74e-42d0-9f5e-e09403f16f48.png)
+
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
 
+Para el tamaño B1ls tenemos:
+
 ![image](https://user-images.githubusercontent.com/25957863/201824864-3f44e4fb-f32a-4eff-94e4-9ef21b695f02.png)
+
+Para el tamaño B2ms tenemos:
 
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
 
