@@ -141,11 +141,19 @@ Calculando Fibonacci para los números dados:
 
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
 
+![image](https://user-images.githubusercontent.com/25957863/201824715-ee292587-90d8-4e99-b4c4-0de2f8e11513.png)
 
+![image](https://user-images.githubusercontent.com/25957863/201824836-6c7ef093-7e6c-4dfc-8983-6aed3cd1a312.png)
 
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
+
+![image](https://user-images.githubusercontent.com/25957863/201824864-3f44e4fb-f32a-4eff-94e4-9ef21b695f02.png)
+
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
     * Tiempos de ejecución de cada petición.
+    
+    
+    
     * Si hubo fallos documentelos y explique.
 7. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
 8. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
