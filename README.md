@@ -83,14 +83,23 @@ Calculando Fibonacci para los números dados:
 
 9. Ahora usaremos Postman para simular una carga concurrente a nuestro sistema. Siga estos pasos.
     * Instale newman con el comando `npm install newman -g`. Para conocer más de Newman consulte el siguiente [enlace](https://learning.getpostman.com/docs/postman/collection-runs/command-line-integration-with-newman/).
+
+![image](https://user-images.githubusercontent.com/25957863/201815228-68ce4308-c01e-4914-bcd2-f39239fcae5a.png)
+
     * Diríjase hasta la ruta `FibonacciApp/postman` en una maquina diferente a la VM.
     * Para el archivo `[ARSW_LOAD-BALANCING_AZURE].postman_environment.json` cambie el valor del parámetro `VM1` para que coincida con la IP de su VM.
+
+![image](https://user-images.githubusercontent.com/25957863/201815272-2b6026e1-64f4-4866-8363-57f5872749ec.png)
+
     * Ejecute el siguiente comando.
 
     ```
     newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALANCING_AZURE].postman_environment.json -n 10 &
     newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALANCING_AZURE].postman_environment.json -n 10
     ```
+
+![image](https://user-images.githubusercontent.com/25957863/201815292-185f0439-7d38-4136-8927-7e676de543a3.png)
+
 
 10. La cantidad de CPU consumida es bastante grande y un conjunto considerable de peticiones concurrentes pueden hacer fallar nuestro servicio. Para solucionarlo usaremos una estrategia de Escalamiento Vertical. En Azure diríjase a la sección *size* y a continuación seleccione el tamaño `B2ms`.
 
@@ -103,7 +112,25 @@ Calculando Fibonacci para los números dados:
 **Preguntas**
 
 1. ¿Cuántos y cuáles recursos crea Azure junto con la VM?
+
+![image](https://user-images.githubusercontent.com/25957863/201815749-f2153081-be7b-4cfc-9483-5e1a3333fcc0.png)
+
 2. ¿Brevemente describa para qué sirve cada recurso?
+
+- Azure Virtual Network (VNet) es el bloque de creación fundamental de una red privada en Azure. VNet permite muchos tipos de recursos de Azure, como Azure Virtual Machines (máquinas virtuales), para comunicarse de forma segura entre usuarios, con Internet y con las redes locales. VNet es similar a una red tradicional que funcionaría en su propio centro de datos, pero aporta las ventajas adicionales de la infraestructura de Azure, como la escala, la disponibilidad y el aislamiento.
+
+- Una interfaz de red permite que una máquina virtual de Azure se comunique con los recursos de Internet, Azure y locales. Una máquina virtual creada con el Azure Portal tiene una interfaz de red con la configuración predeterminada. En su lugar, puede crear interfaces de red con una configuración personalizada y agregar una o varias interfaces de red a una máquina virtual al crearla. También puede cambiar la configuración predeterminada de la interfaz de red en una interfaz de red existente.
+
+- Las máquinas virtuales de Azure permiten la implementación de una serie de aplicaciones y programas informáticos en un sistema virtualizado. Además, Azure también permite la virtualización de sistemas operativos Linux y de aplicaciones de Oracle, SAP o IBM, entre otros.
+
+- Las direcciones IP públicas permiten a los recursos de Internet la comunicación entrante a los recursos de Azure. Permiten que los recursos de Azure se comuniquen con los servicios de Azure orientados al público e Internet. Hasta que cancele la asignación, la dirección estará dedicada al recurso. Un recurso sin una dirección IP pública asignada puede realizar comunicaciones salientes. Azure asigna dinámicamente una dirección IP disponible que no está dedicada al recurso.
+
+- Puede usar el grupo de seguridad de red de Azure para filtrar el tráfico de red entre los recursos de Azure de una red virtual de Azure. Un grupo de seguridad de red contiene reglas de seguridad que permiten o deniegan el tráfico de red entrante o el tráfico de red saliente de varios tipos de recursos de Azure. Para cada regla, puede especificar un origen y destino, un puerto y un protocolo.
+
+- Con un par de claves SSH puede crear una máquinas virtuales en Azure que usen claves SSH para la autenticación.
+
+- Los discos administrados de Azure son volúmenes de almacenamiento de nivel de bloque que administra Azure y que se usan con Azure Virtual Machines. Los discos administrados se pueden considerar como un disco físico en un servidor local, pero virtualizado. Con los discos administrados, lo único que tiene que hacer es especificar el tamaño y el tipo del disco y aprovisionarlo. Cuando aprovisione el disco, Azure controla el resto.
+
 3. ¿Al cerrar la conexión ssh con la VM, por qué se cae la aplicación que ejecutamos con el comando `npm FibonacciApp.js`? ¿Por qué debemos crear un *Inbound port rule* antes de acceder al servicio?
 4. Adjunte tabla de tiempos e interprete por qué la función tarda tando tiempo.
 5. Adjunte imágen del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
