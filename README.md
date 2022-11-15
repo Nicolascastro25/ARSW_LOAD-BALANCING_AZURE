@@ -86,12 +86,16 @@ Calculando Fibonacci para los números dados:
 
 ![image](https://user-images.githubusercontent.com/25957863/201815228-68ce4308-c01e-4914-bcd2-f39239fcae5a.png)
 
+
     * Diríjase hasta la ruta `FibonacciApp/postman` en una maquina diferente a la VM.
     * Para el archivo `[ARSW_LOAD-BALANCING_AZURE].postman_environment.json` cambie el valor del parámetro `VM1` para que coincida con la IP de su VM.
 
+
 ![image](https://user-images.githubusercontent.com/25957863/201815272-2b6026e1-64f4-4866-8363-57f5872749ec.png)
 
+
     * Ejecute el siguiente comando.
+
 
     ```
     newman run ARSW_LOAD-BALANCING_AZURE.postman_collection.json -e [ARSW_LOAD-BALANCING_AZURE].postman_environment.json -n 10 &
