@@ -150,9 +150,10 @@ Calculando Fibonacci para los números dados:
 ![image](https://user-images.githubusercontent.com/25957863/201824864-3f44e4fb-f32a-4eff-94e4-9ef21b695f02.png)
 
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
+
+![image](https://user-images.githubusercontent.com/25957863/201825855-3724711e-400d-4848-a0b6-5b6dcd13784e.png)
+
     * Tiempos de ejecución de cada petición.
-    
-    
     
     * Si hubo fallos documentelos y explique.
 7. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
