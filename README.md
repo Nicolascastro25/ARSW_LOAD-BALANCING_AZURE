@@ -53,6 +53,8 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 6. Antes de verificar si el endpoint funciona, en Azure vaya a la sección de *Networking* y cree una *Inbound port rule* tal como se muestra en la imágen. Para verificar que la aplicación funciona, use un browser y user el endpoint `http://xxx.xxx.xxx.xxx:3000/fibonacci/6`. La respuesta debe ser `The answer is 8`.
 
+![image](https://user-images.githubusercontent.com/25957863/201812554-3d930832-6745-424c-bb14-d0e52c6b2521.png)
+
 ![image](https://user-images.githubusercontent.com/25957863/201812537-79670728-398c-40da-abe8-6eaddbc4d821.png)
 
 7. La función que calcula en enésimo número de la secuencia de Fibonacci está muy mal construido y consume bastante CPU para obtener la respuesta. Usando la consola del Browser documente los tiempos de respuesta para dicho endpoint usando los siguintes valores:
@@ -67,11 +69,9 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
     * 1080000
     * 1090000    
 
-![image](https://user-images.githubusercontent.com/25957863/201812651-349926dc-e1c5-42d5-bec1-60e73ec96bfc.png)
-
-![image](https://user-images.githubusercontent.com/25957863/201812554-3d930832-6745-424c-bb14-d0e52c6b2521.png)
-
 Calculando Fibonacci para los números dados:
+
+![image](https://user-images.githubusercontent.com/25957863/201812651-349926dc-e1c5-42d5-bec1-60e73ec96bfc.png)
 
 ![image](https://user-images.githubusercontent.com/25957863/201812620-497ec270-215f-4f65-89ad-6ed4e6b23aa2.png)
 
