@@ -187,9 +187,15 @@ No del todo, si bien se ayudan a bajar los tiempos de ejecución, estos tiempos 
 
 9. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
 
+Implicaria que se tenga que incurrir en posibles sobrecostos, esto debido a que no se hace una buena planificación de la infraestructura y los recursos que netamente se van usar. Como vimos en el apartado anterior las diferencias entre los tamaños `B2ms` y `B1ls` implican costos de $56 USD por hora de ejecución. 
+
 10. ¿Hubo mejora en el consumo de CPU o en los tiempos de respuesta? Si/No ¿Por qué?
 
+Si, se evidenció una constante mejora ya que la maquina tuvo mejores recursos para dar una respuesta optima a las solicitudes hechas con postman. Pasó de tener un consumo del 98% al 51% la CPU de la maquina.
+
 11. Aumente la cantidad de ejecuciones paralelas del comando de postman a `4`. ¿El comportamiento del sistema es porcentualmente mejor?
+
+
 
 ### Parte 2 - Escalabilidad horizontal
 
