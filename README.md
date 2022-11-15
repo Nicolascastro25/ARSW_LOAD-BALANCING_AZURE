@@ -47,9 +47,9 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 5. Para ejecutar la aplicación puede usar el comando `npm FibinacciApp.js`, sin embargo una vez pierda la conexión ssh la aplicación dejará de funcionar. Para evitar ese compartamiento usaremos *forever*. Ejecute los siguientes comando dentro de la VM.
 
-![image](https://user-images.githubusercontent.com/25957863/201812502-dc4542de-04ca-43b7-93bb-5710bdb233ad.png)
-
     ` node FibonacciApp.js`
+
+![image](https://user-images.githubusercontent.com/25957863/201812502-dc4542de-04ca-43b7-93bb-5710bdb233ad.png)
 
 6. Antes de verificar si el endpoint funciona, en Azure vaya a la sección de *Networking* y cree una *Inbound port rule* tal como se muestra en la imágen. Para verificar que la aplicación funciona, use un browser y user el endpoint `http://xxx.xxx.xxx.xxx:3000/fibonacci/6`. La respuesta debe ser `The answer is 8`.
 
@@ -77,7 +77,7 @@ Calculando Fibonacci para los números dados:
 
 8. Dírijase ahora a Azure y verifique el consumo de CPU para la VM. (Los resultados pueden tardar 5 minutos en aparecer).
 
-![Imágen 2](images/part1/part1-vm-cpu.png)
+![image](https://user-images.githubusercontent.com/25957863/201812976-c6c415c9-1228-4ec1-b31f-86a90bf34dc6.png)
 
 9. Ahora usaremos Postman para simular una carga concurrente a nuestro sistema. Siga estos pasos.
     * Instale newman con el comando `npm install newman -g`. Para conocer más de Newman consulte el siguiente [enlace](https://learning.getpostman.com/docs/postman/collection-runs/command-line-integration-with-newman/).
