@@ -163,9 +163,13 @@ Para el tamaño B2ms tenemos:
 
 Para el tamaño B1ls tenemos:
 
+En este caso como podemos observar en la siguiente imagen, el tiempo de ejecucion realizado por las pruabas newman fue de 2 minutos con 58.3s y muestra fallos en 0 de las 10 peticiones realizadas.  Adicionalmente se puede observar la media del tiempo de respuesta que en este caso fueron 17,8s, de igual forma el tiempo minimo y maximo.
+
 ![image](https://user-images.githubusercontent.com/25957863/201825855-3724711e-400d-4848-a0b6-5b6dcd13784e.png)
 
 Para el tamaño B2ms tenemos:
+
+En este caso como podemos observar en la siguiente imagen, el tiempo de ejecucion realizado por las pruabas newman fue de 2 minutos con 55.8s, lo cual se redujo no tan considerablemente, esto por que al realizar el cambio de tamaño de la maquina a b2ms, esta consiguio mas RAM y mas almacenamiento. De igual forma muestra fallos en 4 de las 10 peticiones realizadas. Estos fallos se deben a que se genera una alta concurrencia. 
 
 ![image](https://user-images.githubusercontent.com/25957863/201828671-3178bd11-676c-4098-9348-2ea57260c582.png)
 
