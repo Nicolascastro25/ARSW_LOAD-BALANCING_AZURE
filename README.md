@@ -278,7 +278,13 @@ Maquina 1:
 ![image](https://user-images.githubusercontent.com/25957863/202036656-1d5115cf-4776-43ba-ab91-17fe0a00e63e.png)
 
 Maquina 2:
+
+![image](https://user-images.githubusercontent.com/25957863/202037544-8fc96430-1de5-4f85-a283-c2ca039811d3.png)
+
 Maquina 3:
+
+No se puede realizar la conexion pese a que la cuenta de Azure Students únciamente deja crear dos maquinas con respectiva ip pública.
+![image](https://user-images.githubusercontent.com/25957863/202039551-7a3771d1-8c67-4b42-8bb8-c23520a02eac.png)
 
 #### Probar el resultado final de nuestra infraestructura
 
@@ -294,7 +300,13 @@ Maquina 1:
 ![image](https://user-images.githubusercontent.com/25957863/202036723-e3fde105-d5e7-450d-bec7-6b5ac51e1bc3.png)
 
 Maquina 2:
+![image](https://user-images.githubusercontent.com/25957863/202037598-ae613a13-5ce4-44a7-9a61-08ee4d48c05b.png)
+![image](https://user-images.githubusercontent.com/25957863/202037648-ac54178e-fbfa-41b4-9fb4-ea8d8f88327c.png)
+
 Maquina 3:
+
+No se puede realizar la prueba debido a que no existe IP pública de la maquina creada.
+![image](https://user-images.githubusercontent.com/25957863/202039562-b81862a0-bf69-4d94-b8a6-d4135df83497.png)
 
 2. Realice las pruebas de carga con `newman` que se realizaron en la parte 1 y haga un informe comparativo donde contraste: tiempos de respuesta, cantidad de peticiones respondidas con éxito, costos de las 2 infraestrucruras, es decir, la que desarrollamos con balanceo de carga horizontal y la que se hizo con una maquina virtual escalada.
 
