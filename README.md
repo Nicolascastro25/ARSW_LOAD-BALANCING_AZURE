@@ -155,9 +155,13 @@ Para el tamaño B1ls tenemos:
 
 ![image](https://user-images.githubusercontent.com/25957863/201824864-3f44e4fb-f32a-4eff-94e4-9ef21b695f02.png)
 
+Se llega a consumir el 99,8250 % de la CPU realizando las peticiones con Postman, lo que significa que la maquina no cuenta con los suficientes recursos para realizar las peticiones de forma concurrente.
+
 Para el tamaño B2ms tenemos:
 
 ![image](https://user-images.githubusercontent.com/25957863/201828631-57de28fa-15f0-4458-9b70-e341002f0aad.png)
+
+Se llega a consumir el 51,01 % de la CPU realizando las peticiones con Postman, lo que significa que la maquina cuenta con suficientes recursos para realizar las peticiones de forma concurrente.
 
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
 
@@ -175,7 +179,11 @@ En este caso como podemos observar en la siguiente imagen, el tiempo de ejecucio
 
 7. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
 
+![image](https://user-images.githubusercontent.com/25957863/201830677-9b9c59e1-527c-4979-9ad6-3ea9593027e0.png)
+
 8. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
+
+No del todo, si bien se ayudan a bajar los tiempos de ejecución, estos tiempos se ven afectados por la mala optimización del código. Realmente no fue un cambio significativo, y la relacion costo beneficio de la maquina B1lS no se compara a la B2ms.
 
 9. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
 
