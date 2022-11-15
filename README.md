@@ -157,13 +157,22 @@ Para el tamaño B1ls tenemos:
 
 Para el tamaño B2ms tenemos:
 
+![image](https://user-images.githubusercontent.com/25957863/201828631-57de28fa-15f0-4458-9b70-e341002f0aad.png)
+
 6. Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
 
+Para el tamaño B1ls tenemos:
+
 ![image](https://user-images.githubusercontent.com/25957863/201825855-3724711e-400d-4848-a0b6-5b6dcd13784e.png)
+
+Para el tamaño B2ms tenemos:
+
+![image](https://user-images.githubusercontent.com/25957863/201828671-3178bd11-676c-4098-9348-2ea57260c582.png)
 
     * Tiempos de ejecución de cada petición.
     
     * Si hubo fallos documentelos y explique.
+   
 7. ¿Cuál es la diferencia entre los tamaños `B2ms` y `B1ls` (no solo busque especificaciones de infraestructura)?
 8. ¿Aumentar el tamaño de la VM es una buena solución en este escenario?, ¿Qué pasa con la FibonacciApp cuando cambiamos el tamaño de la VM?
 9. ¿Qué pasa con la infraestructura cuando cambia el tamaño de la VM? ¿Qué efectos negativos implica?
