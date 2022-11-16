@@ -293,6 +293,7 @@ Probando :
 
 2. Realice las pruebas de carga con `newman` que se realizaron en la parte 1 y haga un informe comparativo donde contraste: tiempos de respuesta, cantidad de peticiones respondidas con éxito, costos de las 2 infraestrucruras, es decir, la que desarrollamos con balanceo de carga horizontal y la que se hizo con una maquina virtual escalada.
 
+![image](https://user-images.githubusercontent.com/25957863/202052732-4ad45134-6705-4d1a-b04e-c80c4a2c0c99.png)
 
 
 3. Agregue una 4 maquina virtual y realice las pruebas de newman, pero esta vez no lance 2 peticiones en paralelo, sino que incrementelo a 4. Haga un informe donde presente el comportamiento de la CPU de las 4 VM y explique porque la tasa de éxito de las peticiones aumento con este estilo de escalabilidad.
@@ -369,7 +370,6 @@ El almacenamiento con redundancia de zona (ZRS) replica su cuenta de almacenamie
 
 Puede usar un grupo de seguridad de red de Azure para filtrar el tráfico de red entre los recursos de Azure en una red virtual de Azure. Un grupo de seguridad de red contiene reglas de seguridad que permiten o deniegan el tráfico de red entrante o el tráfico de red saliente desde varios tipos de recursos de Azure. Para cada regla, puede especificar el origen y el destino, el puerto y el protocolo.
 
-* Informe de newman 1 (Punto 2)
 * Presente el Diagrama de Despliegue de la solución.
 
 ![Diagrama sin título drawio (2)](https://user-images.githubusercontent.com/25957863/202051190-53e92d0e-fb1b-4b03-8b44-8a58e54880c9.png)
