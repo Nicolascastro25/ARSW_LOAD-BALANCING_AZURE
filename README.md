@@ -372,6 +372,7 @@ Puede usar un grupo de seguridad de red de Azure para filtrar el tráfico de red
 * Informe de newman 1 (Punto 2)
 * Presente el Diagrama de Despliegue de la solución.
 
+![Diagrama sin título drawio (2)](https://user-images.githubusercontent.com/25957863/202051190-53e92d0e-fb1b-4b03-8b44-8a58e54880c9.png)
 
 
 
