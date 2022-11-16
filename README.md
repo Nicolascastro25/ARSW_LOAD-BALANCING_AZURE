@@ -293,17 +293,6 @@ Probando :
 
 2. Realice las pruebas de carga con `newman` que se realizaron en la parte 1 y haga un informe comparativo donde contraste: tiempos de respuesta, cantidad de peticiones respondidas con éxito, costos de las 2 infraestrucruras, es decir, la que desarrollamos con balanceo de carga horizontal y la que se hizo con una maquina virtual escalada.
 
-![Sin título](https://user-images.githubusercontent.com/25957863/202053196-ae543330-18fd-4d1b-82cf-f6181c83d224.png)
-
-Vemos en la parte izquierda que con el escalamiento vertical todas las peticiones realizadas fueron aceptadas, mientras que en escalamiento horizontal algunas de estas fallaron. Además de esto se puede evidenciar significativamente la disminución del tiempo de ejecución de las peticiones. Por lo tanto podemos concluir rapidamente que el tiempo de ejecucion del programa se puede arreglar por medio del escalamiento horizontal, mientras que el manejo de peticiones con el escalamiento vertical.
-
-
-En cuanto al costo general ya habíamos visto los costos entre las diferentes capacidades de disco en cada una de las maquinas virtuales en la siguiente imagen:
-
-![costo_general](https://user-images.githubusercontent.com/25957863/202053609-50017339-544e-4fad-8709-92d35cc27655.png)
-
-Podemos hacer rapidamente un breve analisis de costo de la siguiente manera:
-
 3. Agregue una 4 maquina virtual y realice las pruebas de newman, pero esta vez no lance 2 peticiones en paralelo, sino que incrementelo a 4. Haga un informe donde presente el comportamiento de la CPU de las 4 VM y explique porque la tasa de éxito de las peticiones aumento con este estilo de escalabilidad.
 
 ```
@@ -377,6 +366,23 @@ El almacenamiento con redundancia de zona (ZRS) replica su cuenta de almacenamie
 * ¿Cuál es el propósito del *Network Security Group*?
 
 Puede usar un grupo de seguridad de red de Azure para filtrar el tráfico de red entre los recursos de Azure en una red virtual de Azure. Un grupo de seguridad de red contiene reglas de seguridad que permiten o deniegan el tráfico de red entrante o el tráfico de red saliente desde varios tipos de recursos de Azure. Para cada regla, puede especificar el origen y el destino, el puerto y el protocolo.
+
+* Informe de newman 1 (Punto 2)
+
+
+![Sin título](https://user-images.githubusercontent.com/25957863/202053196-ae543330-18fd-4d1b-82cf-f6181c83d224.png)
+
+Vemos en la parte izquierda que con el escalamiento vertical todas las peticiones realizadas fueron aceptadas, mientras que en escalamiento horizontal algunas de estas fallaron. Además de esto se puede evidenciar significativamente la disminución del tiempo de ejecución de las peticiones. Por lo tanto podemos concluir rapidamente que el tiempo de ejecucion del programa se puede arreglar por medio del escalamiento horizontal, mientras que el manejo de peticiones con el escalamiento vertical.
+
+
+En cuanto al costo general ya habíamos visto los costos entre las diferentes capacidades de disco en cada una de las maquinas virtuales en la siguiente imagen:
+
+![costo_general](https://user-images.githubusercontent.com/25957863/202053609-50017339-544e-4fad-8709-92d35cc27655.png)
+
+Podemos hacer rapidamente un breve analisis de costo de la siguiente manera:
+
+![image](https://user-images.githubusercontent.com/25957863/202054258-9535ecf9-4ffc-4790-bb07-fa96c589b414.png)
+
 
 * Presente el Diagrama de Despliegue de la solución.
 
