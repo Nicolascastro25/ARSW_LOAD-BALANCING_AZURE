@@ -293,8 +293,16 @@ Probando :
 
 2. Realice las pruebas de carga con `newman` que se realizaron en la parte 1 y haga un informe comparativo donde contraste: tiempos de respuesta, cantidad de peticiones respondidas con éxito, costos de las 2 infraestrucruras, es decir, la que desarrollamos con balanceo de carga horizontal y la que se hizo con una maquina virtual escalada.
 
-![image](https://user-images.githubusercontent.com/25957863/202052732-4ad45134-6705-4d1a-b04e-c80c4a2c0c99.png)
+![Sin título](https://user-images.githubusercontent.com/25957863/202053196-ae543330-18fd-4d1b-82cf-f6181c83d224.png)
 
+Vemos en la parte izquierda que con el escalamiento vertical todas las peticiones realizadas fueron aceptadas, mientras que en escalamiento horizontal algunas de estas fallaron. Además de esto se puede evidenciar significativamente la disminución del tiempo de ejecución de las peticiones. Por lo tanto podemos concluir rapidamente que el tiempo de ejecucion del programa se puede arreglar por medio del escalamiento horizontal, mientras que el manejo de peticiones con el escalamiento vertical.
+
+
+En cuanto al costo general ya habíamos visto los costos entre las diferentes capacidades de disco en cada una de las maquinas virtuales en la siguiente imagen:
+
+![costo_general](https://user-images.githubusercontent.com/25957863/202053609-50017339-544e-4fad-8709-92d35cc27655.png)
+
+Podemos hacer rapidamente un breve analisis de costo de la siguiente manera:
 
 3. Agregue una 4 maquina virtual y realice las pruebas de newman, pero esta vez no lance 2 peticiones en paralelo, sino que incrementelo a 4. Haga un informe donde presente el comportamiento de la CPU de las 4 VM y explique porque la tasa de éxito de las peticiones aumento con este estilo de escalabilidad.
 
