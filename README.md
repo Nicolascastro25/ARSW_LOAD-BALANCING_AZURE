@@ -390,5 +390,7 @@ Podemos hacer rapidamente un breve analisis de costo de la siguiente manera:
 
 ![Diagrama sin título drawio (2)](https://user-images.githubusercontent.com/25957863/202051190-53e92d0e-fb1b-4b03-8b44-8a58e54880c9.png)
 
+### Autores:
 
-
+- [Jaime Nicolás Castro Acuña](https://github.com/Nicolascastro25).
+- [Yesid Camilo Mora Barbosa](https://github.com/Camilomora117).
